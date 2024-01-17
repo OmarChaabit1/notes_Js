@@ -1,0 +1,213 @@
+:root {
+    --purple: #B978C8;
+    --red: #F27D86;
+    --blue: #9379F8;
+    --green: #71CF6E;
+    --light-gray: #EAEFF3;
+    --text-color-blue: #30304C;
+    --text-color-gray: #807F91;
+    --fallback: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Fira Sans", "Helvetica Neue", sans-serif;
+    font: 400 18px/1.5 "Open Sans", var(--fallback);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--light-gray);
+}
+
+header h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+}
+
+main article {
+    flex: 1;
+}
+
+main article:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article h2 {
+    margin: 10px;
+    color: var(--text-color-blue);
+}
+
+main article h2 span {
+    color: var(--blue);
+}
+
+.form {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    /* Purple */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.form>* {
+    width: 300px;
+    margin: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+input::placeholder {
+    padding: 10px;
+}
+
+input {
+    padding: 10px 0px;
+}
+
+select {
+    padding: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.reset {
+    background-color: gray;
+    color: var(--light-gray);
+}
+
+.submit {
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+}
+
+.note {
+    border: 3px solid var(--purple);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.idnote {
+    position: absolute;
+    top: 0px;
+    border-right: 3px solid var(--purple);
+    border-bottom: 3px solid var(--purple);
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    color: red;
+    font-weight: 700;
+}
+
+.content {
+    margin: 40px;
+}
+
+.switch,
+.delete {
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.notes {
+    height: 70vh;
+    overflow: scroll;
+    padding: 3px;
+}
+
+.delete {
+    background-color: var(--red);
+    color: var(--light-gray);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: white;
+    background: red;
+}
+
+.switch {
+    background-color: var(--green);
+    color: var(--light-gray);
+    position: absolute;
+    bottom: 0px;
+    right: 85px;
+    cursor: pointer;
+}
+
+.switch:hover {
+    color: white;
+    background: #29c524;
+}
+
+footer {
+    background-color: var(--blue);
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+/* TextArea */
+.formSection textarea {
+    width: 380px;
+    height: 351px;
+    margin: 0.20rem 0 0.5em 0;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.formSection img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.images {
+    text-align: center;
+    width: 150px;
+    height: 250px;
+    margin: 0 0 10px 40px;
+}
+
+/* error */
+.errorInput {
+    color: red;
+    display: block;
+}
+
+#submitBtn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+/* New Form */

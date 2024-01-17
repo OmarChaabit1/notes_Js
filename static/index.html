@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam uemf 2023 - node js & vanilla js</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            My notes 
+        </h1>
+    </header>
+    
+    <main>
+        <article>
+            <h2>
+                New note:
+            </h2>
+            <div class="formSection">
+
+                <textarea id="noteInput" placeholder="Enter your note"></textarea>
+                <span id="errorNoteInput" class="errorInput"></span>
+
+                <input type="file" id="imageInput" name="image" accept="image/*">
+                <!-- <select id="answerInput">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select> -->
+                <span id="errorNoteInput" class="errorInput"></span>
+
+                <div class="controls">
+                    <button id="resetBtn" class="reset">Cancel</button>
+                    <button id="submitBtn" class="submit">Save Note </button>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2>
+                Notes (<span id="countnotesSpan">0</span>)
+            </h2>
+            <div id="notesDiv" class="notes">
+
+                <!-- <div class="note ">
+                    <span class="idnote">1</span>
+                    <div class="content">Certainly! Let's enhance the style of the buttons and the overall layout to make it more Certainly! Let's enhance the style of the buttons and the overall layout to make it more</div>
+                    <img class="images" src="./images/image1.png.webp" alt="Note Image">
+                    <button class="delete">Delete</button>
+                    <button class="switch">Switch</button>
+                </div> -->
+
+                <!-- <div class="note true">
+                    <span class="idnote">2</span>
+                    <div class="content">1 + 1 = 2</div>
+                    <button class="delete">Delete</button>
+                    <button class="switch">Switch</button>
+                </div> -->
+            </div>
+        </article>
+    </main>
+    <footer>
+       <h5>
+        <PRE>        ----------------------------------
+        ESTF|omar.chaabit@usmba.ac.ma|2024
+         ---------------------------------- </PRE></h5>
+    </footer>
+</body>
+
+</html>
