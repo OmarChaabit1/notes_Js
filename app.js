@@ -1,9 +1,8 @@
 const express = require('express');
-const path = require('path');
 const fs = require('fs');
 const{middleWareVerfication} = require('./utils')
 const app = express();
-const PORT = 10000;
+const PORT = 3000;
 
 app.use(express.json());
 app.use(express.static("./static"));
@@ -59,9 +58,8 @@ app.delete("/notes/:id", (req, res) => {
 });
 
 app.put("/notes/:id", middleWareVerfication, (req, res) => {
-    // Handle note update logic
+    // Handle book update logic
 });
-
-app.listen(PORT, () => {
-    console.log("Server Started at :", PORT);
+app.listen(PORT,() => {
+    console.log('Server started at : ',PORT);
 });

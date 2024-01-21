@@ -43,28 +43,36 @@ main article:nth-child(1) {
 }
 
 main article h2 {
-    margin: 10px;
     color: var(--text-color-blue);
+    font-size: 52px ;
+    margin-top: 4rem;
 }
 
 main article h2 span {
     color: var(--blue);
 }
 
-.form {
-    align-items: center;
-    width: 100%;
+.formSection {
+    background: #fff;
     display: flex;
+    align-items: center;
+    justify-content: start;
     flex-direction: column;
-    background-color: var(--blue);
-    /* Purple */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white;
+    padding: 0 40px;
+    height: 100%;
+    margin: 1rem;
 }
-
-.form>* {
+.formSection textarea {
+    background: #eee ;
+    outline:  none ;
+    border: none ;
+    margin-bottom:  18px  ;
+    padding: 10px 15px ;
+    font-size: 13px ;
+    border-radius: 8px ;
+    width: 100%;
+}
+.formSection>* {
     width: 300px;
     margin: 10px;
 }
@@ -195,7 +203,7 @@ footer {
 
 .images {
     text-align: center;
-    width: 150px;
+    width: auto ;
     height: 250px;
     margin: 0 0 10px 40px;
 }
@@ -210,4 +218,4 @@ footer {
     background: gray;
     cursor: not-allowed;
 }
-/* New Form */
+

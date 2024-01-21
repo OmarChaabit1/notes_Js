@@ -63,8 +63,10 @@ const  addnotesToDiv = (data)=>{
     div.innerText = data.note
 
     // for the image : 
-    img.classList.add("images")
-    img.src = "/images/" + data.image;
+    if (data.image) {
+        img.classList.add("images");
+        img.src = "/images/" + data.image;
+    }
 
 
     countnotesSpan.innerText = parseInt(countnotesSpan.innerText) +1
@@ -87,6 +89,7 @@ const  addnotesToDiv = (data)=>{
           alert('Error removing Data')
         })
         xhr.send()
+        location.reload()
     })
 
     btnSwitch.classList.add("switch")
@@ -96,7 +99,7 @@ const  addnotesToDiv = (data)=>{
     })
     notesDiv.appendChild(container)
 }
-const urlApi = "http://127.0.0.1:10000/notes"
+const urlApi = "http://127.0.0.1:3000/notes";
 const loadnote = ()=>{
     notesDiv.innerHTML =""
     const xhr = new XMLHttpRequest()
@@ -116,7 +119,7 @@ const loadnote = ()=>{
 loadnote()
 submitBtn.addEventListener('click',()=>{
     let noteValue = noteInput.value
-    let imageValue = imageInput.files[0].name;
+    let imageValue = imageInput.value
     let dataToSend = {
         note:noteValue,
         image:imageValue
